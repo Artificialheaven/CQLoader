@@ -6,10 +6,10 @@
   ## onebot
     + 该指令只有一个参数，参数为向 go-cqhttp 直接发送的json，返回 go-cqhttp 返回的数据。一般来说为插件可以直接使用的编码。
   ## runtime
-   ### 可能的参数
-    + rundir 获取当前星辰框架运行的真实目录。在框架一般运行状态下，也是 go-cqhttp.exe 运行的目录。
-    + version 获取当前 CQLoader 的版本。
-    + CPUInfo 获取当前CPU的数据，共两行，分别为 cpu型号、cpu占用情况。
+   + 可能的参数
+    - rundir 获取当前星辰框架运行的真实目录。在框架一般运行状态下，也是 go-cqhttp.exe 运行的目录。
+    - version 获取当前 CQLoader 的版本。
+    - CPUInfo 获取当前CPU的数据，共两行，分别为 cpu型号、cpu占用情况。
   ## cq
    ### 可能的参数
     1. Fimage
