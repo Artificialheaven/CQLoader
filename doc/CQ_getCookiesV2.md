@@ -4,7 +4,7 @@
   或 runtime(rundir) 等。
 # 程序
   ## onebot
--      该指令只有一个参数，参数为向 go-cqhttp 直接发送的json，返回 go-cqhttp 返回的数据。一般来说为插件可以直接使用的编码。
+    + 该指令只有一个参数，参数为向 go-cqhttp 直接发送的json，返回 go-cqhttp 返回的数据。一般来说为插件可以直接使用的编码。
   ## runtime
     ### 可能的参数
      + rundir 获取当前星辰框架运行的真实目录。在框架一般运行状态下，也是 go-cqhttp.exe 运行的目录。
