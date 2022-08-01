@@ -5,7 +5,7 @@
 + 以及 super 老婆的建议，故对本接口进行重新封装，使其发挥其他作用。
 
 ## 简介
-+CQ_getCookiesV2 函数仅有两个参数，一个是CQ插件内部的AuthCode，另一个是链接网址。重新封装后，该网址参数重置为指令传输参数。
++ CQ_getCookiesV2 函数仅有两个参数，一个是CQ插件内部的AuthCode，另一个是链接网址。重新封装后，该网址参数重置为指令传输参数。
 ## 使用方法
 + 传递参数为(此处省略参数authcode) onebot({"action":"get_login_info","params":{}})
  - 此时将直接向 go-cqhttp发送 文本json ，返回值为 go-cqhttp 返回的返回值。
