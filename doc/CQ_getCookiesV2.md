@@ -18,7 +18,7 @@
          - 这个参数为网络图片的链接，下载后返回图片CQ码。（你也可以手动构建符合 go-cqhttp 标准的CQ码来进行发送，并不一定需要使用本命令）。
      3. voice
          - 这个参数为语音的绝对路径，可以是amr或silk等 go-cqhttp 可直接识别的音频文件。除非装载了 ffmpeg 否则不能发送mp3等音频文件。
-     4.Avoice
+     4. Avoice
           - 这个参数由 kt.p32mr 返回，是音频文件在 data/voices/ 下的文件名。返回go-cqhttp的语音CQ码。
   ## kt
     ### 可能的参数
