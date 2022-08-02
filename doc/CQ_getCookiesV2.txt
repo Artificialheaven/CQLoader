@@ -22,10 +22,27 @@
          这个参数由 kt.p32mr 返回，是音频文件在 data\voices\ 下的文件名或在。返回go-cqhttp的语音CQ码。
        CQimage
          这个参数为原CoolQ的缓存目录下的图片，存储在 data\image\ 下，会自动转换为 go-cqhttp 可以接受的图片CQ码。不会移动或复制文件。
+       nodeA
+         用于实现发送合并转发已存在的消息，返回go-cqhttp返回的数据，使用方式为:
+             cq.nodeA(10001,125,654,849,999)  第一个数字是欲发送到的群，第二个及以后数字为 msgId
+       nodeB
+         用于实现发送自定义的合并转发消息，返回go-cqhttp返回的数据，使用方式为：
+             cq.nodeB(///base64///)
+             ///base64///为 {"group_id":10001,"data":[{"user_id":10001,"name":"tester1","message":"messageA"},{"user_id":10002,"name":"tester2","message":"messageB"}]} 以base64编码的json文本。
+             参数user_id为合并转发消息内的发送人QQ，name为显示的名字，message为发送的文本，这些都是可以自定义的。group_id为欲发送到的群
+       nodeC
+         用于实现发送自定义和引用的混合合并转发消息，返回go-cqhttp返回的数据，使用方式为：
+             cq.nodeC(///base64///)
+             ///base64///为 {"group_id":10001,"data":[{"type":"id","id":123},{"type":"message","user_id":10001,"name":"tester1","message":"messageA","seq":1,"time":"1167019200"}]}
+             type为id时，id为msgId。type为message时，前三个参数与B相同，后seq可能是顺序，time为发送时间。group_id为欲发送到的群
+              
   kts
      可能
        p32mr.[码率]      （如果不会装载ffmpeg，请先使用本命令转换文件，记得将ffmpeg放在 data\ 下。如果没有该文件返回空）
          这个参数为mp3文件的绝对路径，将文件转换为amr文件，并返回amr文件的文件名。
            使用方法 kts.p32mr.8000(E:\release\data\voices\test.mp3) 返回 test.amr 。实际文件将存储在 E:\release\data\voices\ （即go-cqhttp默认的缓存目录）
            如果已经正确装载了ffmpeg就请不要使用本命令多此一举了。
-           
+       base64decode
+         这个参数为一个base64文本，返回解码后的数据（文本形式）。
+       base64encode
+         这个参数为一个文本，返回编码的base64文本。
