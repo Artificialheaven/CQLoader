@@ -7,3 +7,6 @@
     [CQ:group,type=decreaseA,doqq=123456,qq=456789]  -群 [群成员减少] 群成员被管理员踢出，doqq为操作管理员，qq为被踢的管理员。
     [CQ:group,type=decreaseB,qq=456789]  -群 [群成员减少] 群成员主动退出群聊。
     
+  支持发送的CQ码
+    [CQ:poke,qq=123456]  -私/群 [戳一戳其他人] 戳一戳123456.
+    [CQ:forward,node=///node///]  -群 发送合并转发消息。 ///node/// 为base64编码的json文本,可由 CQ_getCookiesV2 生成。
