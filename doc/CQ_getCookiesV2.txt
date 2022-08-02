@@ -28,3 +28,4 @@
          这个参数为mp3文件的绝对路径，将文件转换为amr文件，并返回amr文件的文件名。
            使用方法 kts.p32mr.8000(E:\release\data\voices\test.mp3) 返回 test.amr 。实际文件将存储在 E:\release\data\voices\ （即go-cqhttp默认的缓存目录）
            如果已经正确装载了ffmpeg就请不要使用本命令多此一举了。
+           
