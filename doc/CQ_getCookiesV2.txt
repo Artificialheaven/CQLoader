@@ -6,10 +6,10 @@
   
 程序
   onebot
-    该指令只有一个参数，参数为向 go-cqhttp 直接发送的json，返回 go-cqhttp 返回的数据。一般来说为插件可以直接使用的编码。注意，使用本命令必须携带 action 参数，即gocqhttp文档的终结点。否则将返回错误文本。
+    该指令只有一个参数，参数为向 go-cqhttp 直接发送的json，返回 go-cqhttp 返回的数据。一般来说为插件可以直接使用的编码。注意，使用本命令必须携带 action 参数，即gocqhttp文档的终结点。否则将返回错误文本。（注意： CQLoader 不能发送纯json文本，会被go-cqhttp当做 json格式的CQ码 转为对象，导致无法发送，请在json首尾添加字符或破坏json格式）
   runtime
      可能
-       rundir 获取当前星辰框架运行的真实目录。在框架一般运行状态下，也是 go-cqhttp.exe 运行的目录。
+       rundir 获取当前星辰框架运行的真实目录。在框架一般运行状态下，也是 go-cqhttp.exe 运行的目录。末尾不带 \ 。
        version 获取当前 CQLoader 的版本。
        CPUInfo 获取当前CPU的数据，共两行，分别为 cpu型号、cpu占用率。
   cq
@@ -19,9 +19,12 @@
        voice
          这个参数为语音的绝对路径，可以是amr或silk等 go-cqhttp 可直接识别的音频文件。除非装载了 ffmpeg 否则不能发送mp3等音频文件。（装置ffmpeg后go-cqhttp会自动修改文件类型）
        Avoice
-         这个参数由 kt.p32mr 返回，是音频文件在 data/voices/ 下的文件名。返回go-cqhttp的语音CQ码。
+         这个参数由 kt.p32mr 返回，是音频文件在 data\voices\ 下的文件名或在。返回go-cqhttp的语音CQ码。
+       CQimage
+         这个参数为原CoolQ的缓存目录下的图片，存储在 data\image\ 下，会自动转换为 go-cqhttp 可以接受的图片CQ码。不会移动或复制文件。
   kts
      可能
-       p32mr      （如果不会装载ffmpeg，请先使用本命令转换文件，记得将ffmpeg放在 /bin/ 下。如果没有该文件返回空）
-         这个参数为mp3文件的相对路径，将文件转换为amr文件，并返回amr文件的文件名。（路径在 /data/voices/ 内，一般只返回文件名）
-         这个参数为amr的码率，为空则默认8000。（码率越高，文件越大，上传时间越长。
+       p32mr.[码率]      （如果不会装载ffmpeg，请先使用本命令转换文件，记得将ffmpeg放在 data\ 下。如果没有该文件返回空）
+         这个参数为mp3文件的绝对路径，将文件转换为amr文件，并返回amr文件的文件名。
+           使用方法 kts.p32mr.8000(E:\release\data\voices\test.mp3) 返回 test.amr 。实际文件将存储在 E:\release\data\voices\ （即go-cqhttp默认的缓存目录）
+           如果已经正确装载了ffmpeg就请不要使用本命令多此一举了。
