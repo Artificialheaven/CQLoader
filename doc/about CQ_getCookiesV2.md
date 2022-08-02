@@ -10,3 +10,5 @@
 + 传递参数为(此处省略参数authcode) onebot({"action":"get_login_info","params":{}})
  - 此时将直接向 go-cqhttp发送 文本json ，返回值为 go-cqhttp 返回的返回值。
  - 详细使用方法请参见 CQ_getCookiesV2.md
+ - 例如，铃心的使用使用方法为 【机器人Cookie onebot({"action":"get_login_info","params":{}})】
+ - 但请注意，onebot命令返回的大多数为json，go-cqhttp会将json对象转为 MiraiGO Element 并解析失败导致发送json为空。可以任意在json前方添加任意文本或破坏json（例如 \ ）来阻断这一过程。
