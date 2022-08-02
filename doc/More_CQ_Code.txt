@@ -1,0 +1,9 @@
+本文件定义了 CQLoader 支持的更多CQ码。
+  支持接收的CQ码（多为事件CQ码转换而来），用于解决可能的事件错误。
+    [CQ:poke,qq=123456]  -私/群 [有人被戳一戳] 123456为被戳人的QQ
+    [CQ:upload,id=1,name=a.zip,size=1024]  -群 [群文件上传] id为文件busid，name为文件名，size为文件大小（字节数）。
+    [CQ:admin,type=set,qq=123456]  -群 [群管理设置] qq为成为管理员的人。
+    [CQ:admin,type=unset,qq=123456]  -群 [群管理设置] qq为被撤管理员的人。
+    [CQ:group,type=decreaseA,doqq=123456,qq=456789]  -群 [群成员减少] 群成员被管理员踢出，doqq为操作管理员，qq为被踢的管理员。
+    [CQ:group,type=decreaseB,qq=456789]  -群 [群成员减少] 群成员主动退出群聊。
+    
