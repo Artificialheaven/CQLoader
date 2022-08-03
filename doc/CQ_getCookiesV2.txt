@@ -35,6 +35,7 @@
              cq.nodeC(///base64///)
              ///base64///为 {"group_id":10001,"data":[{"type":"id","id":123},{"type":"message","user_id":10001,"name":"tester1","message":"messageA","seq":1,"time":"1167019200"}]}
              type为id时，id为msgId。type为message时，前三个参数与B相同，后seq可能是顺序，time为发送时间。group_id为欲发送到的群
+             由于某些原因，当需要合并发送图片时，请使用
               
   kts
      可能
