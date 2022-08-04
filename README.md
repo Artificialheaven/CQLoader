@@ -9,8 +9,10 @@
 + 在运行目录下新建 other.ini 并输入
 ```
 [数据设置]
-ws端口=6702
-port端口=6703
+ws_url=127.0.0.1:6702
+# ws服务的地址，无须带 ws://
+http_url=127.0.0.16703
+# http服务的地址，无须带 http://
 ```
 将 config.yml 中的修改为如下
 ```
@@ -24,3 +26,5 @@ port端口=6703
       address: 0.0.0.0:6702
 ```
 注意，多开时other.ini中的ws端口与port端口需要与config.yml中相互对应，否则将无法接受发送任何消息。
+
+[老版readme (004Preview及更早)](https://github.com/Artificialheaven/CQLoader/blob/main/readme_old.md)
