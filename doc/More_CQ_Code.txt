@@ -4,9 +4,12 @@
     [CQ:upload,id=1,name=a.zip,size=1024]  -群 [群文件上传] id为文件busid，name为文件名，size为文件大小（字节数）。
     [CQ:admin,type=set,qq=123456]  -群 [群管理设置] qq为成为管理员的人。
     [CQ:admin,type=unset,qq=123456]  -群 [群管理设置] qq为被撤管理员的人。
-    [CQ:group,type=decreaseA,doqq=123456,qq=456789]  -群 [群成员减少] 群成员被管理员踢出，doqq为操作管理员，qq为被踢的管理员。
-    [CQ:group,type=decreaseB,qq=456789]  -群 [群成员减少] 群成员主动退出群聊。
+    //[CQ:group,type=decreaseA,doqq=123456,qq=456789]  -群 [群成员减少] 群成员被管理员踢出，doqq为操作管理员，qq为被踢的管理员。
+    //[CQ:group,type=decreaseB,qq=456789]  -群 [群成员减少] 群成员主动退出群聊。
+    [CQ:honor,type=talkative]  -群 [某人成为龙王] 触发者为龙王，群号为目标群。
+    [CQ:honor,type=performer]  -群 [某人获得群聊之火] 触发者为获得者，群号为目标群。
+    [CQ:honor,type=emotion]  -群 [某人获得快乐之源] 触发者为获得者，群号为目标群。
     
   支持发送的CQ码
     [CQ:poke,qq=123456]  -私/群 [戳一戳其他人] 戳一戳123456.
-    [CQ:forward,node=///node///]  -群 发送合并转发消息。 ///node/// 为base64编码的json文本,可由 CQ_getCookiesV2 生成。
+    //[CQ:forward,node=///node///]  -群 发送合并转发消息。 ///node/// 为base64编码的json文本,可由 CQ_getCookiesV2 生成。
