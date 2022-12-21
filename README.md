@@ -1,5 +1,6 @@
 # CQLoader
 一个简单的 CoolQ 插件加载器。由易语言编写。
+已不再更新
 
 # 使用方法
 + 启动 GO-CQHTTP-GUI.exe 点击左侧 账号管理 启动 go-cqhttp。扫码登录或关闭go-cqhttp，在config.yml中对应位置键入账号密码，重新点击 账号管理 。待go-cqhttp网络自检完成后，点击左侧 重新链接 完成登录。
